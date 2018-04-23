@@ -37,4 +37,4 @@ train_and_test <- rbind(train_all, test_all)
 library(dplyr)
 train_and_test2 <- group_by(train_and_test, subject, Activity_desc)
 train_and_test3 <- summarize_all(train_and_test2, mean)
-              
+write.table(train_and_test3, "Course Project.txt")           
